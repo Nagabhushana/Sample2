@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Sample2.Models;
+using System.Diagnostics;
 
 namespace Sample2.Controllers
 {
@@ -20,7 +16,10 @@ namespace Sample2.Controllers
 
         public IActionResult Index()
         {
+            string abc = "mylog";
+            _logger.LogInformation("mylog", abc);
             return View();
+           
         }
 
         public IActionResult Privacy()
